@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import sklearn  # This is the correct name for the import
-from sklearn.preprocessing import StandardScaler # Example if you need the scaler
+import scikit-learn
 import pickle
 
 # 1. Load your saved model and scaler
