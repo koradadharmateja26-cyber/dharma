@@ -4,6 +4,21 @@ import numpy as np
 import sklearn      # This is scikit-learn
 import pickle
 # import joblib    # (Optional: Add this if you used joblib instead of pickle)
+import os
+import subprocess
+import sys
+
+# This forces the cloud to install scikit-learn if it's missing
+try:
+    import sklearn
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn==1.5.1"])
+    import sklearn
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+import pickle
 # 1. Load your saved model and scaler
 try:
     model = pickle.load(open('trained_model.sav', 'rb'))
