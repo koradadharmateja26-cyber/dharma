@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import scikit-learn
+import sklearn      # This is scikit-learn
 import pickle
-
+# import joblib    # (Optional: Add this if you used joblib instead of pickle)
 # 1. Load your saved model and scaler
 try:
     model = pickle.load(open('trained_model.sav', 'rb'))
